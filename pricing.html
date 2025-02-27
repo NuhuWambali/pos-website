@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebPOS - Smart Point of Sale</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<style>
+
+    .section {
+        text-align: center;
+    }
+    
+
+    .pricing-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 50px 0;
+        cursor: pointer;
+    }
+    
+    /* Make Cards More Flexible */
+    .pricing-card {
+        width: 400px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .pricing-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+    
+    .pricing-card h2 {
+        margin: 0;
+        background: linear-gradient(135deg, #23A860 70%, #1A237E 120%);
+        color: white;
+        padding: 15px 0;
+    }
+    
+    .pricing-card h3 {
+        color:  #23A860;
+        margin: 10px 0;
+    }
+    
+    .pricing-card ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .pricing-card ul li {
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .pricing-card ul li:last-child {
+        border-bottom: none;
+    }
+    
+    .pricing-card .price {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
+    .pricing-card .price span {
+        font-size: 14px;
+        font-weight: normal;
+        color: gray;
+    }
+    
+    .cta-section {
+        padding: 40px;
+        background: linear-gradient(135deg, #23A860 40%, #1A237E 120%);
+
+        color: white;
+    }
+    
+    .cta-section button {
+        padding: 10px 20px;
+        background-color: white;
+        color:  #23A860;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    
+    .cta-section button:hover {
+        background-color: #fff;
+        color: #000;
+    }
+    
+    p, li {
+        font-size: 17px !important;
+    }
+    
+    /* Mobile Device Styles */
+    @media (max-width: 768px) {
+        .pricing-section {
+            flex-direction: column; /* Stack pricing cards vertically */
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .pricing-card {
+            width: 25em; /* Make the pricing cards take up more space */
+            margin-bottom: 20px; /* Add some space between cards */
+        }
+    
+        .pricing-card h2 {
+            font-size: 22px; /* Adjust heading size */
+        }
+    
+        .pricing-card h3 {
+            font-size: 18px; 
+        }
+    
+        .pricing-card ul li {
+            font-size: 14px; 
+        }
+    
+        .pricing-card .trybutton {
+            width: 80%; 
+            padding: 12px;
+        }
+    
+    .trybutton {
+        margin-top: 2em;
+        margin-bottom: 2em;
+        display: inline-block;
+        padding: 12px 70px!important;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+        border: none;
+        border-radius: 25px;
+        background-color: #23A860;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .trybutton:hover {
+        background-color: #23A860;
+        transform: scale(1.05);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+       color:  #000;
+    }
+    
+    .trybutton:active {
+        transform: scale(1);
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+    }
+    }
+    
+    /* Small screen styles */
+    @media (max-width: 480px) {
+        .pricing-card h2 {
+            font-size: 20px; 
+        }
+    
+        .pricing-card h3 {
+            font-size: 16px;
+        }
+    
+        .pricing-card ul li {
+            font-size: 12px; 
+        }
+    
+        .pricing-card .trybutton {
+            font-size: 14px;
+        }
+    }
+    .trybutton {
+        margin-top: 2em;
+         margin-bottom: 2em;
+        display: inline-block;
+        padding: 12px 70px;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+        border: none;
+        border-radius: 25px;
+        background-color: #23A860;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .trybutton:hover {
+        background-color: #fff;
+        transform: scale(1.05);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        color:  #000;
+        border:1px solid #fff;
+    }
+    
+    .trybutton:active {
+        transform: scale(1);
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+    }
+    
+    
+    .trybutton11 {
+    
+        display: inline-block;
+        padding: 12px 50px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #23A860;
+        text-decoration: none;
+        border: none;
+        border-radius: 25px;
+        background-color: #fff;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .trybutton11:hover {
+        background-color: #fff;
+        transform: scale(1.05);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        color:  #000;
+        border:1px solid #fff;
+    }
+    
+    .trybutton11:active {
+        transform: scale(1);
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+    }
+    
+    .section1 {
+        padding-top:70px;
+        padding-bottom:4px 
+        text-align: center; 
+        border-radius: 10px;
+
+    }
+    
+    /* Title Styling */
+    .pricing-title {
+        font-size: 36px; 
+        font-weight: bold;
+        color: #000; 
+        margin-bottom: 20px; 
+        letter-spacing: 1px; 
+    }
+    
+    /* Description Styling */
+    .pricing-description {
+        font-size: 18px;
+        color: #555; 
+        line-height: 1.6; /* Increased line height for readability */
+        margin: 0 auto;
+        max-width: 700px; 
+    }
+    </style>
+    
+<body>
+    <div class=" d-flex align-items-center position-relative">
+   
+        <div class="animated-bg"></div>
+    
+        <div class="container position-relative">
+            <div class="navbar navbar-expand-lg navbar-light mt-2">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="./assets/images/logo-light.png" alt="Logo" class="img-fluid" width="130">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto animate__animated animate__bounce">
+                            <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./about.html">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./pricing.html">Pricing</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./fqa.html">FAQ'S</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+    <section class="about-hero">
+        <div class="overlay ">
+            <h1 class="text-center">Our Pricing Plans</h1>
+         <p style="font-size: 1.2em; text-align: center; color: #f8f9fa;">
+        Find the right plan for your business. 
+        </div>        
+    </section>
+
+    <div class="section section1">
+        <h1 class="pricing-title">Our Pricing Plans</h1>
+        <p class="pricing-description">Choose a plan that fits your needs and helps you grow. Find the perfect solution for your business.</p>
+    </div>
+
+    <!-- Section 2: Pricing Cards -->
+    <div class="section">
+        <div class="pricing-section">
+            <!-- Free Plan -->
+            <div class="pricing-card">
+                <h2>Demo Plan</h2>
+                <h3 class="price">0 Tsh</h3>
+                <p class="text-center" style="font-size: 1.2em; color: #000;">
+                    <strong>Demo Plan</strong> - Explore a limited set of features before upgrading.
+                </p>
+                <ul>
+                    <li>Receipt printing (Demo only)</li>
+                    <li>Multi-currency support (Demo only)</li>
+                    <li>Barcode scanning functionality (Demo only)</li>
+                    <li>Basic sales reports (Limited access)</li>
+                    <li>Touch screen interfacing (Demo only)</li>
+                    <li>Price fixing facility (Demo only)</li>
+                </ul>
+                <a href="#" class="trybutton" >Try Demo</a>
+            </div>
+            
+
+            <!-- Standard Plan -->
+            <div class="pricing-card">
+                <h2>Standard Plan</h2>
+                <h3 class="price">From 300,000 Tsh <span>per month, paid annually</span></h3>
+                <ul>
+                    <li>Full access to sales reporting.</li>
+                    <li>Integrated barcode scanning & printing.</li>
+                    <li>Multi-currency support & split payments.</li>
+                    <li>POS device compatibility (printers, drawers, displays).</li>
+                    <li>Manage product pricing & discounts.</li>
+                    <li>Generate invoices, receipts, & credit notes.</li>
+                    <li>Secure cloud-based data storage.</li>
+                    <li>Email customer statements directly.</li>
+                </ul>
+                <a href="#" class="trybutton">Subscribe Now</a>
+            </div>
+            
+
+            <!-- Premium Plan -->
+            <div class="pricing-card">
+                <h2>Premium Plan</h2>
+                <h3 class="price">From 500,000 Tsh <span>per month, paid annually</span></h3>
+                <ul>
+                    <li>Advanced sales & inventory analytics.</li>
+                    <li>Dedicated account manager.</li>
+                    <li>Unlimited POS device integrations.</li>
+                    <li>Multi-location store management.</li>
+                    <li>Automated VAT reconciliation & tax reports.</li>
+                    <li>Priority customer support 24/7.</li>
+                    <li>Access to loyalty programs & promotions.</li>
+                    <li>Cloud backup with real-time sync.</li>
+                </ul>
+                <a href="#" class="trybutton" >Subscribe Now</a>
+            </div>
+
+
+           
+        </div>
+    </div>
+
+ 
+    <div class="section cta-section">
+        <h2 class="text-white">Ready to Get Started?</h2>
+        <p class="text-white">Contact our team to find the perfect plan for your business.</p>
+        <a href="./contact.html" class="trybutton11" >Contact Us</a>
+
+    </div>
+
+    <div class="section another-cta-section my-5">
+        <h2 class="text-dark">Let's Take the Next Step!</h2>
+        <p class="text-dark">Our team is ready to help you take your business to the next level. Reach out now.</p>
+    </div>
+
+
+    <footer class="footer  py-4" style="background-color: #23A860;">
+        <div class="container">
+            <div class="row">
+                <!-- Footer Logo Section -->
+                <div class="col-md-3 mb-3 ">
+                    <h3 class="animate__animated text-white animate__fadeInBottomRight">Web Corporation Limited</h3>
+                    <p class="text-white">Your trusted partner in innovative technology solutions. We offer high-quality products and services designed to improve your business operations.</p>
+                </div>
+                <!-- Footer Links Section -->
+                <div class="col-md-3 mb-3">
+                    <h3 class="animate__animated text-white animate__fadeInBottomRight">Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="/" class="text-white">Home</a></li>
+                        <li><a href="/about-us" class="text-white">About Us</a></li>
+                        <li><a href="/services" class="text-white">Services</a></li>
+                        <li><a href="/contact-us" class="text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- Footer Contact Section -->
+                <div class="col-md-3 mb-3 text-white">
+                    <h3 class="animate__animated text-white animate__fadeInBottomRight">Contact Us</h3>
+                    <p class="text-white"><strong>Email:</strong> support@webcorporation.com</p>
+                    <p class="text-white"><strong>Phone:</strong> +255 123 456 789</p>
+                    <p class="text-white"><strong>Address:</strong> 123 Tech Street, Dar Es Salaam, Tanzania</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="social-links text-center mt-3">
+                        <a href="https://www.facebook.com" class="text-white mx-3" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="https://www.twitter.com" class="text-white mx-3" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+                        <a href="https://www.instagram.com" class="text-white mx-3" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="https://www.linkedin.com" class="text-white" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Copyright -->
+            <div class="text-center mt-4 text-white">
+                <p class="text-white">&copy; 2024 Web Corporation Limited. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>

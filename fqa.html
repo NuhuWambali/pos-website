@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebPOS - Smart Point of Sale</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        /* General Styles */
+        .faq-container {
+            max-width: 100%;
+            margin: 3em auto;
+
+            padding: 4em;
+            border-radius: 5px;
+        }
+
+        .faq-section {
+            margin-bottom: 20px;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            cursor: pointer;
+            padding: 10px;
+            background: linear-gradient(135deg, #23A860 20%, #1A237E 110%);
+            color: white;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+        }
+
+        /* About Us Hero Section */
+       
+
+        /* Media Queries for Small Screens */
+        @media (max-width: 767px) {
+            .faq-container {
+                padding: 2em;
+            }
+
+            .navbar {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .faq-section h3 {
+                font-size: 1.5em;
+            }
+
+            .faq-question {
+                font-size: 1.1em;
+                padding: 12px;
+            }
+
+            .faq-answer {
+                font-size: 1em;
+                padding: 12px;
+            }
+
+            .footer {
+                padding: 3rem 0;
+            }
+
+            .footer .col-md-3 {
+                text-align: center;
+                margin-bottom: 2em;
+            }
+
+            .footer .social-links {
+                margin-top: 1em;
+            }
+
+            .footer .social-links a {
+                margin: 0 10px;
+            }
+
+            .about-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .about-hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="d-flex align-items-center position-relative" style="margin-bottom:4em">
+        <div class="animated-bg"></div>
+        <div class="container position-relative">
+            <div class="navbar navbar-expand-lg navbar-light mt-2">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="./assets/images/logo-light.png" alt="Logo" class="img-fluid" width="130">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto animate__animated animate__bounce">
+                            <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./about.html">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./pricing.html">Pricing</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./fqa.html">FAQ'S</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <section class="about-hero">
+        <div class="overlay">
+            <h1 class="text-center">Frequently Asked Questions</h1>
+            <p style="font-size: 1.2em;">Find answers to common questions about Web Pos Software.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <div class="faq-container">
+        <h2 class="text-center">Frequently Asked Questions</h2>
+
+        <div class="faq-section mt-5">
+            <h3>Hardware & Software Requirements</h3>
+            <div class="faq-question">Can Web Pos be installed in my organization?</div>
+            <div class="faq-answer">Yes, Web Pos can be installed in organizations of various sizes.</div>
+
+            <div class="faq-question">I have/need only 1 license key, do I need a separate server?</div>
+            <div class="faq-answer">No, a separate server is not required for a single license key.</div>
+
+            <div class="faq-question">I want to install Web Pos software in the cloud, is this possible?</div>
+            <div class="faq-answer">Yes, Web Pos software supports cloud installation.</div>
+        </div>
+
+        <div class="faq-section">
+            <h3>About Our Software</h3>
+            <div class="faq-question">Who has developed Web Pos® Software?</div>
+            <div class="faq-answer">Web Pos® Software has been developed by industry experts to meet business needs.</div>
+
+            <div class="faq-question">How do I know whether it will accommodate my requirements?</div>
+            <div class="faq-answer">Our team will assist you in evaluating the software’s compatibility with your requirements.</div>
+        </div>
+
+        <div class="faq-section">
+            <h3>Software Support Service</h3>
+            <div class="faq-question">Do I get training on the software?</div>
+            <div class="faq-answer">Yes, training sessions are available for users.</div>
+        </div>
+
+        <div class="faq-section">
+            <h3>Implementation of Web Pos® Software</h3>
+            <div class="faq-question">Who is responsible for uploading my data in the system?</div>
+            <div class="faq-answer">The customer is responsible for data uploads, but we provide guidance to ensure clarity.</div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-4" style="background-color: #23A860;">
+        <div class="container">
+            <div class="row">
+                <!-- Footer Logo Section -->
+                <div class="col-md-3 mb-3">
+                    <h3 class="animate__animated text-white animate__fadeInBottomRight">Web Corporation Limited</h3>
+                    <p class="text-white">Your trusted partner in innovative technology solutions. We offer high-quality products and services designed to improve your business operations.</p>
+                </div>
+
+                <!-- Footer Links Section -->
+                <div class="col-md-3 mb-3">
+                    <h3 class="animate__animated text-white animate__fadeInBottomRight">Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="/" class="text-white">Home</a></li>
+                        <li><a href="/about-us" class="text-white">About Us</a></li>
+                        <li><a href="/services" class="text-white">Services</a></li>
+                        <li><a href="/contact-us" class="text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Contact Section -->
+                <div class="col-md-3 mb-3 text-white">
+                    <h3 class="animate__animated text-white animate__fadeInBottomRight">Contact Us</h3>
+                    <p class="text-white"><strong>Email:</strong> support@webcorporation.com</p>
+                    <p class="text-white"><strong>Phone:</strong> +255 123 456 789</p>
+                    <p class="text-white"><strong>Address:</strong> 123 Tech Street, Dar Es Salaam, Tanzania</p>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="social-links text-center mt-3">
+                        <a href="https://www.facebook.com" class="text-white mx-3" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="https://www.twitter.com" class="text-white mx-3" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+                        <a href="https://www.instagram.com" class="text-white mx-3" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="https://www.linkedin.com" class="text-white" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Copyright -->
+            <div class="text-center mt-4 text-white">
+                <p class="text-white">&copy; 2024 Web Corporation Limited. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FAQ Toggle Script -->
+    <script>
+        document.querySelectorAll('.faq-question').forEach((question) => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

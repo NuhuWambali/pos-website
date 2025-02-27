@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebPOS - Smart Point of Sale</title>
+    <head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+      </head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
+</head>
+<style>
+    .contact-section {
+        background-color: #f7f7f7;
+    }
+
+    .contact-form .form-label {
+        font-weight: bold;
+    }
+
+    .contact-form .btn {
+        background-color: #23A860;
+        color: white;
+        border: none;
+        font-size: 1.1rem;
+        padding: 12px;
+        transition: background-color 0.3s ease;
+    }
+
+    .contact-form .btn:hover {
+        background-color: #1A237E;
+    }
+
+    .contact-info h4 {
+        font-weight: bold;
+    }
+
+    .social-links a {
+        color: #23A860;
+        font-size: 1.5rem;
+    }
+
+    .social-links a:hover {
+        color: #1A237E;
+    }
+
+    /* Media Queries */
+    @media (max-width: 767px) {
+        .contact-form .form-control {
+            font-size: 1rem;
+        }
+
+        .contact-form .btn {
+            font-size: 1rem;
+        }
+
+        .contact-info {
+            text-align: center;
+        }
+
+        .social-links {
+            margin-top: 1em;
+        }
+    }
+
+</style>
+<body>
+
+    <!-- Navbar -->
+   
+
+    <!-- Hero Section -->
+    <div class="hero d-flex align-items-center position-relative">
+        <!-- Animated Background -->
+        <div class="animated-bg"></div>
+    
+        <div class="container position-relative">
+            <div class="navbar navbar-expand-lg navbar-light mt-2">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="./assets/images/logo-light.png" alt="Logo" class="img-fluid" width="130">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto animate__animated animate__bounce">
+                            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./about.html">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./pricing.html">Pricing</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./fqa.html">FAQ'S</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center text-center text-lg-start" style="padding-top:12em!important">
+                <div class="col-lg-6 text-white">
+                    <h1 class="fw-bold animate__animated">WebPOS - The Ultimate Smart POS Solution</h1>
+                    <p class="lead animate__animated">Fast Speed, Security, and Reliability for Your Business Success</p>
+                    <div class="mt-4 pos-buttons">
+                        <a href="#" class="btn btn-light btn-lg text-dark me-2 animate__animated">Get Started</a>
+                        <a href="#features" class="btn btn-outline-light btn-lg animate__animated">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center mt-4 mt-lg-0">
+                    <img src="./assets/images/pos.png" alt="POS System" class="img-fluid hero-img animate__animated animate__lightSpeedInRight">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <section class="features container text-center" id="features" style="padding: 50px 0;">
+        <div class="row">
+            <div class="col-md-4 animate__animated" style="animation-delay: 0.3s;">
+                <div class="card p-4 shadow-lg rounded" style="transition: transform 0.3s, box-shadow 0.3s;">
+                    <div class="card-body">
+                        <i class="fa fa-credit-card fa-3x mb-3 gradient-icon" aria-hidden="true"></i>
+                        <h3 class="card-title" style="color: #23A860;">Fast Transactions</h3>
+                        <p class="card-text">Process sales quickly and efficiently.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 animate__animated" style="animation-delay: 0.6s;">
+                <div class="card p-4 shadow-lg rounded" style="transition: transform 0.3s, box-shadow 0.3s;">
+                    <div class="card-body">
+                        <i class="fa fa-lock fa-3x mb-3 gradient-icon" aria-hidden="true"></i>
+                        <h3 class="card-title" style="color: #23A860;">Secure Payments</h3>
+                        <p class="card-text">Supports multiple payment methods.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 animate__animated" style="animation-delay: 0.9s;">
+                <div class="card p-4 shadow-lg rounded" style="transition: transform 0.3s, box-shadow 0.3s;">
+                    <div class="card-body">
+                        <i class="fas fa-poll fa-3x mb-3 gradient-icon" aria-hidden="true"></i>
+                        <h3 class="card-title" style="color: #23A860;">Real-time Reports</h3>
+                        <p class="card-text">Monitor your business from anywhere.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    <section class="benefits-section container p-4">
+        <h2 class="text-center mb-4 gradient-text animate__animated animate__lightSpeedInRight">Benefits of Web POS System</h2>
+        <div class="row">
+            <div class="col-md-6 d-flex align-items-center mb-3 benefit-item animate__animated animate__lightSpeedInRight" >
+                <i class="fa fa-plug benefit-icon mr-4"></i>
+                <div class="benefit-text">
+                    <h5>Device Integration</h5>
+                    <p>Built-in interfaces with barcode scanners, receipt printers, POL-display, cash drawers, and barcode labellers.</p>
+                </div>
+            </div>
+    
+            <div class="col-md-6 d-flex align-items-center mb-3 benefit-item animate__animated animate__lightSpeedInRight" >
+                <i class="fa fa-file-alt benefit-icon"></i>
+                <div class="benefit-text">
+                    <h5>Manage Your Documents</h5>
+                    <p>Process sales documents like quotations, proformas, orders, invoices, credit and debit notes, and cash sales.</p>
+                </div>
+            </div>
+    
+            <div class="col-md-6 d-flex align-items-center mb-3 benefit-item animate__animated animate__lightSpeedInRight" >
+                <i class="fa fa-tags benefit-icon"></i>
+                <div class="benefit-text">
+                    <h5>Better Price Control</h5>
+                    <p>Easy setup for sales items and services, with discount info and product groups. Customize receipts with your logo.</p>
+                </div>
+            </div>
+    
+            <div class="col-md-6 d-flex align-items-center mb-3 benefit-item animate__animated animate__lightSpeedInRight" >
+                <i class="fa fa-credit-card benefit-icon"></i>
+                <div class="benefit-text">
+                    <h5>Optimize Your Payments</h5>
+                    <p>Get overdue payments via reports. Use the Pay-in facility for full, partial, or split payments on accounts.</p>
+                </div>
+            </div>
+    
+            <div class="col-md-6 d-flex align-items-center mb-3 benefit-item animate__animated animate__lightSpeedInRight" >
+                <i class="fa fa-database benefit-icon"></i>
+                <div class="benefit-text">
+                    <h5>Safe Storage</h5>
+                    <p>Store unlimited customer accounts in any currency, with payment terms, credit limits, and discount details.</p>
+                </div>
+            </div>
+    
+            <div class="col-md-6 d-flex align-items-center mb-3 benefit-item animate__animated animate__lightSpeedInRight" >
+                <i class="fa fa-exchange-alt benefit-icon"></i>
+                <div class="benefit-text">
+                    <h5>Simplified Transactions</h5>
+                    <p>Process individual or bulk account statements. Update prices easily and duplicate sales for recurrent invoicing.</p>
+                </div>
+            </div>
+    
+            <div class="col-md-12 d-flex align-items-center mb-3 benefit-item animate__animated animate__lightSpeedInRight" >
+                <i class="fa fa-headset benefit-icon"></i>
+                <div class="benefit-text">
+                    <h5>24/7 Local Help Desk Support</h5>
+                    <p>We provide dedicated support across Tanzania, including Mbeya, Tanga, Arusha, Moshi, Dodoma, and Zanzibar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+  
+ 
+
+    <section class="info-section btn-light p-4 mt-5" style="background: #f8f9fa;">
+        <div class="container my-4">
+            <div class="row align-items-center">
+                <!-- Left Section -->
+                <div class="col-md-8 info-sec">
+                    <h3 class="gradient-text animate__animated animate__zoomIn">Do you want more information or a free demo?</h3>
+                    <p class="animate__animated animate__zoomIn">Contact us and our customer service department will get back to you</p>
+                </div>
+                <!-- Right Section -->
+                <div class="col-md-4 text-md-end text-center">
+                    <a href="contact.html" class="btn btn-success animate__animated animate__zoomIn">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+   
+
+    <section class="features1 py-5">
+       <div class="container">
+        <h2 class="text-white mb-4 text-center animate__animated animate__lightSpeedInLeft">Some of Our Features</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <ul class="list-unstyled feature-list text-center text-white">
+                    <li><i class="fas fa-check-circle animate__animated animate__lightSpeedInLeft"></i> Receipt printing, FISCAL DEVICE compliant</li>
+                    <li><i class="fas fa-check-circle animate__animated animate__lightSpeedInLeft"></i> Multi currency / Split payments facility</li>
+                    <li><i class="fas fa-check-circle animate__animated animate__lightSpeedInLeft"></i> Barcode scanning and Labeling</li>
+                    <li><i class="fas fa-check-circle animate__animated animate__lightSpeedInLeft"></i> Duplicate sales transactions</li>
+                    <li><i class="fas fa-check-circle animate__animated animate__lightSpeedInLeft"></i> POL display, cash drawers interfaces</li>
+                    <li><i class="fas fa-check-circle animate__animated animate__lightSpeedInLeft"></i> Price fixing facility</li>
+                    <li><i class="fas fa-check-circle animate__animated animate__lightSpeedInLeft"></i> Touch Screen interfacing</li>
+                   
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-unstyled feature-list text-center text-white">
+                    <li><i class="fas fa-check-circle animate__animated animate__lightSpeedInLeft"></i> Flexible article/ products definition</li>
+                    <li><i class="fas fa-check-circle animate__animated animate__lightSpeedInLeft"></i> Extensive built-in security</li>
+                    <li><i class="fas fa-check-circle animate__animated animate__lightSpeedInLeft"></i> VAT reconciliation/ proportioning</li>
+                    <li><i class="fas fa-check-circle animate__animated animate__lightSpeedInLeft"></i> Extensive report generator</li>
+                    <li><i class="fas fa-check-circle animate__animated animate__lightSpeedInLeft"></i> Multi currency customer accounts</li>
+                    <li><i class="fas fa-check-circle animate__animated animate__lightSpeedInLeft"></i> Aged debtor analysis</li>
+                    <li><i class="fas fa-check-circle animate__animated animate__lightSpeedInLeft"></i> Credit limits/Account blocking/ Tax exemptions facility</li>
+                    
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-unstyled feature-list text-center text-white">
+                    <li><i class="fas fa-check-circle animate__animated animate__lightSpeedInLeft"></i> Sales analysis features</li>
+                    <li><i class="fas fa-check-circle animate__animated animate__lightSpeedInLeft"></i> Proforma Invoices/Sales orders/Credit & Debit notes</li>
+                    <li><i class="fas fa-check-circle animate__animated animate__lightSpeedInLeft"></i> Multi-layer user security setup</li>
+                    <li><i class="fas fa-check-circle animate__animated animate__lightSpeedInLeft"></i> Variant codes for different packaging sizes</li>
+                    <li><i class="fas fa-check-circle animate__animated animate__lightSpeedInLeft"></i> Send customer statements via Email</li>
+                    <li><i class="fas fa-check-circle animate__animated animate__lightSpeedInLeft"></i> Cash sale cancellations</li>
+                </ul>
+            </div>
+        </div>
+       </div>
+    </section>
+ 
+  
+    <section id="contact-us" class="contact-us-section py-5" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2 class="text-center gradient-text mb-4 animate__animated animate__lightSpeedInLeft">Contact Us</h2>
+            <p class="text-center mb-5 animate__animated animate__lightSpeedInLeft">We'd love to hear from you! Fill out the form below and we'll get back to you as soon as possible.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card shadow-lg p-4 rounded animate__animated animate__lightSpeedInLeft">
+                        <div class="card-body animate__animated animate__lightSpeedInLeft">
+                            <h5 class="card-title text-center mb-4 animate__animated animate__lightSpeedInLeft">Get in Touch</h5>
+                            <form action="your-backend-endpoint" method="POST" class="contact-form">
+                                <div class="row form-row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="form-group">
+                                            <label for="name" class="animate__animated animate__lightSpeedInLeft">Full Name</label>
+                                            <input type="text" class="form-control" id="name" name="name" required placeholder="Your Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="form-group">
+                                            <label for="email" class="animate__animated animate__lightSpeedInLeft">Email Address</label>
+                                            <input type="email" class="form-control" id="email" name="email" required placeholder="Your Email">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="subject" class="animate__animated animate__lightSpeedInLeft">Subject</label>
+                                    <input type="text" class="form-control" id="subject" name="subject" required placeholder="Subject of Your Message">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="message" class="animate__animated animate__lightSpeedInLeft">Message</label>
+                                    <textarea class="form-control" id="message" name="message" rows="5" required placeholder="Write your message here"></textarea>
+                                </div>
+                                <div class="form-group text-center">
+                                    <button type="submit" class="btn btn-success btn-lg animate__animated animate__lightSpeedInLeft">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+
+    <footer class="footer  py-4" >
+        <div class="container">
+            <div class="row">
+                <!-- Footer Logo Section -->
+                <div class="col-md-3 mb-3 ">
+                    <h3 class="animate__animated text-white animate__fadeInBottomRight">Web Corporation Limited</h3>
+                    <p class="text-white">Your trusted partner in innovative technology solutions. We offer high-quality products and services designed to improve your business operations.</p>
+                </div>
+                <!-- Footer Links Section -->
+                <div class="col-md-3 mb-3">
+                    <h3 class="animate__animated text-white animate__fadeInBottomRight">Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="/" class="text-white">Home</a></li>
+                        <li><a href="/about-us" class="text-white">About Us</a></li>
+                        <li><a href="/services" class="text-white">Services</a></li>
+                        <li><a href="/contact-us" class="text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- Footer Contact Section -->
+                <div class="col-md-3 mb-3 text-white">
+                    <h3 class="animate__animated text-white animate__fadeInBottomRight">Contact Us</h3>
+                    <p class="text-white"><strong>Email:</strong> support@webcorporation.com</p>
+                    <p class="text-white"><strong>Phone:</strong> +255 123 456 789</p>
+                    <p class="text-white"><strong>Address:</strong> 123 Tech Street, Dar Es Salaam, Tanzania</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="social-links text-center mt-3">
+                        <a href="https://www.facebook.com" class="text-white mx-3" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="https://www.twitter.com" class="text-white mx-3" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+                        <a href="https://www.instagram.com" class="text-white mx-3" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="https://www.linkedin.com" class="text-white" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Copyright -->
+            <div class="text-center mt-4 text-white">
+                <p class="text-white">&copy; 2024 Web Corporation Limited. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
